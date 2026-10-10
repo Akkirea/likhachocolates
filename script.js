@@ -193,6 +193,27 @@ const journalStories = {
   davao: { title: 'A field note from Davao', body: 'In Davao, cacao grows beneath generous shade and bright tropical rain. We work with the rhythm of the harvest, paying attention to the fruit, the fermentation, and the people whose care carries each bean from the farm to our kitchen.' },
   cacao: { title: 'The long, delicious road to 70%', body: 'A balanced dark bar is built through patience. We roast in small batches, taste as the cacao opens, and refine the blend until the natural fruit, floral notes, and deep roast feel like one clear voice.' }
 };
+const journalGrid = document.querySelector('.journal-grid');
+const journalPrev = document.querySelector('#journalPrev');
+const journalNext = document.querySelector('#journalNext');
+const journalCards = [...document.querySelectorAll('.journal-grid article')];
+let journalIndex = 0;
+const updateJournalArrows = () => {
+  journalPrev.disabled = journalIndex === 0;
+  journalNext.disabled = journalIndex === journalCards.length - 1;
+};
+const scrollToJournal = (index) => {
+  journalIndex = Math.max(0, Math.min(index, journalCards.length - 1));
+  const cardWidth = journalCards[0].getBoundingClientRect().width;
+  const gap = parseFloat(window.getComputedStyle(journalGrid).gap) || 0;
+  const offset = journalIndex * (cardWidth + gap);
+  journalGrid.style.transform = `translateX(-${offset}px)`;
+  updateJournalArrows();
+};
+journalPrev.addEventListener('click', () => scrollToJournal(journalIndex - 1));
+journalNext.addEventListener('click', () => scrollToJournal(journalIndex + 1));
+window.addEventListener('resize', () => scrollToJournal(journalIndex));
+updateJournalArrows();
 const journalDialog = document.querySelector('#journalDialog');
 const journalDialogTitle = document.querySelector('#journalDialogTitle');
 const journalDialogBody = document.querySelector('#journalDialogBody');
