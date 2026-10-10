@@ -70,4 +70,4 @@ img,picture,video,canvas{display:block;max-width:100%;height:auto}.hero-image,.o
 @media(max-width:768px){.hero .button{white-space:nowrap;gap:0}.hero .button b{margin-left:14px}}
 @media(max-width:480px){.story h2{font-size:clamp(54px,15vw,66px)}.story h2 .headline-line{display:inline-block;max-width:100%;font-size:.86em;letter-spacing:-.06em}}
 @media(max-width:768px){.origin{height:clamp(560px,175vw,690px);min-height:0}.origin-image{background-size:cover;background-position:62% center}}
-@media(max-width:768px){.origin h2{font-size:clamp(58px,17vw,74px)}.origin h2 .origin-line{white-space:normal;max-width:100%}.scroll-cue{display:none}}
+@media(max-width:768px){.origin h2{font-size:clamp(46px,13vw,58px)}.origin h2 .origin-line{white-space:nowrap;max-width:100%}.scroll-cue{display:none}}
