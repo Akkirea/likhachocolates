@@ -67,7 +67,7 @@ img,picture,video,canvas{display:block;max-width:100%;height:auto}.hero-image,.o
 @media(max-width:768px){.mobile-break{display:block}}
 @media(max-width:640px){.plant-page-hero{min-height:650px}.plant-page-copy{margin:0 7vw 60px}.plant-page-copy h1{font-size:70px}.plant-page-copy>p:last-child{font-size:15px}.plant-intro{display:block}.plant-intro h2{font-size:67px;margin-bottom:30px}.ingredient-grid{grid-template-columns:1fr;gap:30px}.ingredient-grid h3{margin:18px 0 12px}.nature-promise{grid-template-columns:1fr;gap:25px}.nature-promise h2{font-size:72px}.plant-page-close{padding-top:100px;padding-bottom:100px}.plant-page-close h2{font-size:72px}}
 @media(max-width:480px){.hero h1{font-size:clamp(54px,15vw,62px)}.hero h1 em{white-space:nowrap}}
-@media(max-width:640px){.final-cta h2{font-size:clamp(40px,13vw,60px);line-height:.88}.final-cta h2 em{white-space:nowrap}}
+@media(max-width:640px){.review-card{flex-basis:100%;max-width:100%}.final-cta h2{font-size:clamp(40px,13vw,60px);line-height:.88}.final-cta h2 em{white-space:nowrap}}
 @media(max-width:768px){.hero .button{white-space:nowrap;gap:0}.hero .button b{margin-left:14px}}
 @media(max-width:480px){.story h2{font-size:clamp(54px,15vw,66px)}.story h2 .headline-line{display:inline-block;max-width:100%;font-size:.86em;letter-spacing:-.06em}}
 @media(max-width:768px){.origin{height:clamp(560px,175vw,690px);min-height:0}.origin-image{background-size:cover;background-position:62% center}}
