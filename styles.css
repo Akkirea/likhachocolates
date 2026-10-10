@@ -73,3 +73,4 @@ img,picture,video,canvas{display:block;max-width:100%;height:auto}.hero-image,.o
 @media(max-width:768px){.origin h2{font-size:clamp(46px,13vw,58px)}.origin h2 .origin-line{white-space:nowrap;max-width:100%}.scroll-cue{display:none}}
 /* Keep every product packshot fully visible inside its responsive card. */
 .product-art{background-size:100% 100% !important;background-repeat:no-repeat;background-position:center}
+@media(max-width:768px){.product-card{flex:0 0 100%;max-width:100%}.product-art{width:100%;height:auto;aspect-ratio:4 / 3;border-radius:24px;overflow:hidden}}
