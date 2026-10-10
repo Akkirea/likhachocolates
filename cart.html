@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#21140e" />
+    <meta name="description" content="Your LIKHA chocolate selections." />
+    <title>LIKHA, Your collection</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="cart-page">
+    <header class="site-header cart-page-header">
+      <a class="wordmark" href="index.html" aria-label="LIKHA home">LIKHA<span>®</span></a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html#shop">Shop</a>
+        <a href="index.html#story">Our story</a>
+        <a href="index.html#ingredients">Ingredients</a>
+        <a href="index.html#journal">Journal</a>
+      </nav>
+      <a class="cart-page-back" href="index.html#shop">Continue shopping ↑</a>
+    </header>
+
+    <main class="cart-page-main">
+      <div class="cart-page-heading"><p class="eyebrow">Your selections</p><h1>Your collection.</h1><p>Everything you choose will be carried with care from our kitchen to your door.</p></div>
+      <div class="cart-page-layout">
+        <section class="cart-page-card" aria-labelledby="cartPageItemsTitle">
+          <h2 id="cartPageItemsTitle">Chocolate for your next slow moment</h2>
+          <div id="cartPageItems"></div>
+          <p class="cart-page-empty" id="cartPageEmpty">Your bag is waiting for chocolate.</p>
+        </section>
+        <aside class="cart-page-summary">
+          <p class="eyebrow">Order summary</p>
+          <div><span>Items</span><strong id="cartPageSubtotal">₱0</strong></div>
+          <p class="cart-page-note">Shipping and checkout will be available soon.</p>
+          <button class="button button-dark" id="cartPageCheckout" type="button">Checkout <b>↗</b></button>
+        </aside>
+      </div>
+    </main>
+    <div class="toast" id="cartPageToast" role="status" aria-live="polite"></div>
+    <script src="cart-page.js"></script>
+  </body>
+</html>
