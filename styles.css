@@ -10,7 +10,7 @@
 /* Review carousel controls */
 .review-carousel{display:flex;align-items:center;gap:18px}.review-window{overflow:hidden;flex:1;min-width:0}.review-grid{display:flex;gap:14px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;padding:2px 0 12px}.review-grid::-webkit-scrollbar{display:none}.review-card{min-width:calc((100% - 28px) / 3)}.review-arrow{width:42px;height:42px;flex:0 0 42px;border:1px solid var(--ink);border-radius:50%;font-size:22px;line-height:1;display:grid;place-items:center;transition:background .2s,color .2s,transform .2s}.review-arrow:hover{background:var(--ink);color:var(--cream);transform:scale(1.05)}.review-arrow:disabled{opacity:.3;cursor:default;transform:none}.review-arrow:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 @media(max-width:900px){.review-card{min-width:calc((100% - 14px) / 2)}}
-@media(max-width:640px){.review-carousel{gap:8px}.review-arrow{width:34px;height:34px;flex-basis:34px;font-size:18px}.review-card{min-width:82vw}.review-grid{margin-right:0;scroll-snap-type:x mandatory}.review-card{scroll-snap-align:start}}
+@media(max-width:640px){.review-carousel{gap:8px}.review-arrow{width:34px;height:34px;flex-basis:34px;font-size:18px}.review-card{flex:0 0 82vw;min-width:0;height:auto;min-height:235px;scroll-snap-stop:always}.review-grid{margin-right:0;scroll-snap-type:x mandatory}.review-card{scroll-snap-align:start}}
 
 /* New Philippine flavor palette */
 .art-ube{background:#9f8ab0}.art-ube:before{background:linear-gradient(135deg,#533a63,#211120)}.art-mango{background:#e0a04a}.art-mango:before{background:linear-gradient(135deg,#713b1c,#271109)}.art-pili{background:#aeb388}.art-pili:before{background:linear-gradient(135deg,#49341e,#1f110b)}
@@ -67,6 +67,7 @@ img,picture,video,canvas{display:block;max-width:100%;height:auto}.hero-image,.o
 @media(max-width:768px){.mobile-break{display:block}}
 @media(max-width:640px){.plant-page-hero{min-height:650px}.plant-page-copy{margin:0 7vw 60px}.plant-page-copy h1{font-size:70px}.plant-page-copy>p:last-child{font-size:15px}.plant-intro{display:block}.plant-intro h2{font-size:67px;margin-bottom:30px}.ingredient-grid{grid-template-columns:1fr;gap:30px}.ingredient-grid h3{margin:18px 0 12px}.nature-promise{grid-template-columns:1fr;gap:25px}.nature-promise h2{font-size:72px}.plant-page-close{padding-top:100px;padding-bottom:100px}.plant-page-close h2{font-size:72px}}
 @media(max-width:480px){.hero h1{font-size:clamp(54px,15vw,62px)}.hero h1 em{white-space:nowrap}}
+@media(max-width:640px){.final-cta h2{font-size:clamp(40px,13vw,60px);line-height:.88}.final-cta h2 em{white-space:nowrap}}
 @media(max-width:768px){.hero .button{white-space:nowrap;gap:0}.hero .button b{margin-left:14px}}
 @media(max-width:480px){.story h2{font-size:clamp(54px,15vw,66px)}.story h2 .headline-line{display:inline-block;max-width:100%;font-size:.86em;letter-spacing:-.06em}}
 @media(max-width:768px){.origin{height:clamp(560px,175vw,690px);min-height:0}.origin-image{background-size:cover;background-position:62% center}}

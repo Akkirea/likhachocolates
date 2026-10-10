@@ -73,8 +73,21 @@ const updateReviewArrows = () => {
   previousReviews.disabled = reviewGrid.scrollLeft <= 2;
   nextReviews.disabled = reviewGrid.scrollLeft + reviewGrid.clientWidth >= reviewGrid.scrollWidth - 2;
 };
-previousReviews.addEventListener('click', () => reviewGrid.scrollBy({ left: -reviewGrid.clientWidth * 0.82, behavior: 'smooth' }));
-nextReviews.addEventListener('click', () => reviewGrid.scrollBy({ left: reviewGrid.clientWidth * 0.82, behavior: 'smooth' }));
+const moveReview = (direction) => {
+  const cards = [...reviewGrid.querySelectorAll('.review-card')];
+  if (!cards.length) return;
+
+  const currentIndex = cards.reduce((closestIndex, card, index) => {
+    const closestDistance = Math.abs(cards[closestIndex].offsetLeft - reviewGrid.scrollLeft);
+    const cardDistance = Math.abs(card.offsetLeft - reviewGrid.scrollLeft);
+    return cardDistance < closestDistance ? index : closestIndex;
+  }, 0);
+  const targetIndex = Math.max(0, Math.min(cards.length - 1, currentIndex + direction));
+
+  reviewGrid.scrollTo({ left: cards[targetIndex].offsetLeft, behavior: 'smooth' });
+};
+previousReviews.addEventListener('click', () => moveReview(-1));
+nextReviews.addEventListener('click', () => moveReview(1));
 reviewGrid.addEventListener('scroll', updateReviewArrows, { passive: true });
 window.addEventListener('resize', updateReviewArrows);
 updateReviewArrows();
